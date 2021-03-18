@@ -25,3 +25,7 @@ for index, classlabel in enumerate(classes):
 
 X = np.array(X)
 Y = np.array(Y)
+
+X_train, X_test, y_train, y_test = model_selection.train_test_split(X, Y) #分割処理
+xy = (X_train, X_test, y_train, y_test)
+np.save("./Classifier.npy", xy) #Numpyの配列をテキストファイルとして保存
